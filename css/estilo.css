@@ -1,0 +1,380 @@
+/* ===== RESET BÁSICO ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+.logo img {
+    width: 100px; /* Tamanho padrão para desktop */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .menu-completo {
+        flex-direction: column; /* Empilha itens */
+        gap: 0.5rem;
+    }
+    .item-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+    display: block;
+    }
+    nav ul {
+    display: none;
+    }
+    nav ul.active {
+    display: flex;
+    }
+}
+
+body {
+    line-height: 1.6;
+    color: black;
+    background-color: #ADD8E6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.menu-completo {
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente */
+    list-style: none;
+    gap: 1.5rem; /* Espaçamento entre itens */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.item-logo {
+    margin-right: auto; /* Empurra os outros itens para a direita */
+}
+
+.logo-img {
+    height: 50px; /* Ajuste conforme necessário */
+    width: auto;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer address {
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+.redes-sociais ul {
+    justify-content: center;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.redes-sociais img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.1);
+}
+
+.redes-sociais a:hover {
+    filter: drop-shadow(0 0 5px rgba(0, 51, 102, 0.5));
+}
+
+.redes-sociais {
+    text-align: center; /* Centraliza título e lista */
+    margin: 1rem 0;
+}
+
+/* ===== ELEMENTOS GERAIS ===== */
+h1, h2, h3 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* ===== CARDS DE PRODUTOS ===== */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.card-produto {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.preco {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.botao-comprar {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.botao-comprar:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+/* ===== CARDS DE SERVIÇOS ===== */
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-servico {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #003366;
+}
+
+.card-servico h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.card-servico .preco {
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .grade-produtos,
+    .servicos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== PRODUTOS EM DESTAQUE ===== */
+.produtos-destaque {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+}
+
+.grade-destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.card-destaque {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card-destaque:hover {
+    transform: translateY(-5px);
+}
+
+.card-destaque img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+    background: #fff;
+}
+
+.info-produto {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.preco-atual {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.tag-desconto {
+    background: #e63946;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.tag-novo {
+    background: #003366;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.ver-mais {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.link-ver-mais {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+}
+
