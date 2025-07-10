@@ -152,3 +152,7 @@ document.querySelectorAll('img[loading="lazy"]').forEach(img => {
     img.style.transition = 'opacity 0.3s ease';
     });
 });
+
+document.querySelector('.fechar-aviso')?.addEventListener('click', () => {
+    document.querySelector('.aviso-github').style.display = 'none';
+});
