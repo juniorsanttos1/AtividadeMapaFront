@@ -378,3 +378,31 @@ button[type="submit"]:hover {
     text-decoration: none;
 }
 
+.aviso-github {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.aviso-github a {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.fechar-aviso {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
